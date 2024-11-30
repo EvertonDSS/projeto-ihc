@@ -1,0 +1,350 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 0px;
+  
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #003366;
+      padding: 10px 0;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .banner {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .news {
+      padding: 20px;
+    }
+
+    .news h2 {
+      border-bottom: 2px solid #003366;
+    }
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+.carousel-item img {
+  width: 100%;
+  height: 200px; /* Ajuste o tamanho da altura conforme necessário */
+  object-fit: contain; /* Faz com que a imagem se ajuste ao tamanho da div sem recorte e sem distorção */
+}
+
+/* Afastando as setas do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important; /* Fundo transparente */
+  border: none; /* Remover qualquer borda */
+  width: 5%; /* Ajuste a largura conforme necessário */
+  z-index: 1; /* Garantir que as setas fiquem visíveis */
+}
+
+/* Adicionando espaço para as setas */
+.carousel-control-prev {
+  margin-left: -40px; /* Ajuste esse valor para afastar mais ou menos */
+}
+
+.carousel-control-next {
+  margin-right: -40px; /* Ajuste esse valor para afastar mais ou menos */
+}
+
+/* Ajustando o tamanho das setas, caso necessário */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black !important; /* Seta preta */
+  width: 30px;
+  border-radius: 50%; /* Torna as setas circulares */
+
+  height: 30px;
+}
+/* Container do banner */
+.banner-container {
+  position: relative; /* Permite que o texto seja posicionado sobre a imagem */
+  width: 100%; /* O container ocupa 100% da largura */
+  max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+  height: auto; /* A altura será ajustada conforme a altura da imagem */
+}
+
+/* Estilo da imagem do banner */
+.banner-image {
+  width: 100%; /* A imagem ocupa toda a largura */
+  height: auto; /* A altura é proporcional à largura */
+  display: block; /* Remove espaços indesejados ao redor da imagem */
+}
+
+/* Estilo do texto sobre a imagem */
+.banner-text {
+  position: absolute; /* Permite posicionar o texto sobre a imagem */
+  top: 0;
+  left: 0;
+  width: 100%; /* O texto ocupa toda a largura da imagem */
+  height: 100%; /* O texto ocupa toda a altura da imagem */
+  display: flex;
+  flex-direction: column; /* Organiza o texto em coluna */
+  justify-content: center; /* Centraliza o texto verticalmente */
+  align-items: center; /* Centraliza o texto horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente preto */
+  color: white; /* Cor do texto */
+  padding: 20px;
+  box-sizing: border-box; /* Garantir que o padding não ultrapasse a largura */
+  z-index: 1; /* Coloca o texto sobre a imagem */
+}
+
+/* Tamanho do título */
+.banner-text h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Tamanho do subtítulo */
+.banner-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+  }
+
+  .banner-text p {
+    font-size: 1rem; /* Reduz o tamanho do subtítulo */
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilo básico para o menu */
+nav {
+  padding: 10px;
+  
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: grey;
+  border-radius: 4px;
+}
+
+/* Menu de hambúrguer (visível em dispositivos móveis) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Exibição do menu em telas pequenas */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* O menu fica oculto em telas menores */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #003366;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 15px;
+    color: white !important;
+  }
+
+  .menu-toggle {
+    display: flex; /* Exibe o ícone do menu hambúrguer */
+  }
+
+  nav ul.active {
+    display: flex; /* Quando o menu estiver ativo, ele se torna visível */
+  }
+}
+
+.navbar-collapse {
+  background-color: #003366;
+  color: white
+}
+
+.navbar-custom {
+  background-color: #003366; /* Cor de fundo personalizada */
+}
+
+/* Cor personalizada para o texto da navbar */
+.navbar-custom .navbar-nav .nav-link {
+  color: #ffffff; /* Cor do texto */
+}
+
+/* Mudando a cor do texto quando o item estiver ativo */
+.navbar-custom .navbar-nav .nav-link.active {
+  color: white; /* Cor personalizada para o item ativo */
+}
+
+.sobre-paragrafo {
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  border-radius: 8px; /* Bordas arredondadas para um design mais suave */
+  padding: 20px; /* Espaçamento interno para o conteúdo não ficar apertado */
+  margin: 30px 0; /* Espaçamento superior e inferior */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a seção */
+}
+
+
+.sobre-paragrafo p {
+  font-size: 18px;
+  line-height: 1.7; /* Maior espaçamento entre as linhas para melhorar a legibilidade */
+  color: #333; /* Cor do texto mais suave */
+  margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+}
+
+.sobre-paragrafo p:last-child {
+  margin-bottom: 0; /* Remove o espaço inferior do último parágrafo */
+}
+
+@media (max-width: 768px) {
+  .sobre-paragrafo {
+    padding: 15px; /* Reduz o padding em telas menores */
+  }
+
+  .sobre-paragrafo {
+    font-size: 24px; /* Ajusta o tamanho do título em telas menores */
+  }
+
+  .sobre-paragrafo {
+    font-size: 16px; /* Ajusta o tamanho do texto em telas menores */
+  }
+}
+
+ /* Customização das setas para mover para dentro */
+ .carousel-control-prev,
+ .carousel-control-next {
+   width: 5%; /* Diminuindo o tamanho das setas */
+   z-index: 1; /* Garante que as setas fiquem sobre o carrossel */
+ }
+
+ .carousel-control-prev {
+   left: 20px; /* Movendo a seta da esquerda para dentro */
+ }
+
+ .carousel-control-next {
+   right: 20px; /* Movendo a seta da direita para dentro */
+ }
+
+ /* Para uma melhor experiência, podemos aumentar o tamanho das setas para dispositivos maiores */
+ @media (min-width: 768px) {
+   .carousel-control-prev,
+   .carousel-control-next {
+     width: 7%; /* Aumentando um pouco o tamanho das setas em telas maiores */
+   }
+ }
