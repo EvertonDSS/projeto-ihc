@@ -348,3 +348,8 @@ nav ul li a:hover {
      width: 7%; /* Aumentando um pouco o tamanho das setas em telas maiores */
    }
  }
+
+ .dropdown-menu .dropdown-item:hover {
+  background-color: #6c757d; /* Cinza escuro */
+  color: white; /* Texto branco para contraste */
+}
